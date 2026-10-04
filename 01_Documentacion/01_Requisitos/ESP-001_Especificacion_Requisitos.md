@@ -10,10 +10,11 @@
 | Estado | Pendiente por revisión |
 | Sistema | SmartParking - Gestion de Parqueadero |
 
-| Versión | Fecha | Descripción del cambio | Responsable |
-|---|---|---|---|
-| 1.0 | 04/10/2026 | Creación inicial de la especificación de requisitos | Equipo SmartParking |
+Control de versiones
 
+| Versión | Fecha | Descripción | Responsable |
+|---|---|---|---|
+| 1.0 | 2026-10-04 | Creación de la especificación inicial | Equipo SmartParking |
 
 ## 1. Proposito
 
@@ -159,8 +160,3 @@ La versión 1.0 se considera funcional cuando:
 
 ---
 
-## 8. Control de versiones
-
-| Versión | Fecha | Descripción | Responsable |
-|---|---|---|---|
-| 1.0 | 2026-10-04 | Creación de la especificación inicial | Equipo SmartParking |
