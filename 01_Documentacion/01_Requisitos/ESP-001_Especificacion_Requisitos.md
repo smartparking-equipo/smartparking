@@ -7,7 +7,7 @@
 | Codigo | ESP-001 |
 | Nombre | Especificacion de Requisitos SmartParking |
 | Version | 1.0 |
-| Estado | Aprobado |
+| Estado | Pendiente por revisión |
 | Sistema | SmartParking - Gestion de Parqueadero |
 
 | Versión | Fecha | Descripción del cambio | Responsable |
