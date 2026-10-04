@@ -74,14 +74,6 @@ El sistema deberá calcular el tiempo total de permanencia de un vehículo dentr
 
 El sistema deberá permitir consultar la información de un vehículo mediante su placa, mostrando sus datos básicos de identificación y su estado actual dentro del parqueadero.
 
-### RF-007 - Validación del registro de ingreso
-
-El sistema deberá verificar que el vehículo se encuentre previamente registrado antes de permitir el registro de su ingreso al parqueadero.
-
-### RF-008 - Validación del registro de salida
-
-El sistema deberá verificar que el vehículo tenga un ingreso activo antes de permitir registrar su salida del parqueadero.
-
 
 ---
 
