@@ -6,15 +6,19 @@
 |---|---|
 | Codigo | ESP-001 |
 | Nombre | Especificacion de Requisitos SmartParking |
-| Version | 1.0 |
-| Estado | Pendiente por revisión |
+| Version | 1.1 |
+| Estado | En modificacion CR-001|
+| Fecha | 2026-10-04  |
 | Sistema | SmartParking - Gestion de Parqueadero |
+| Responsable del cambio| Santiago1054 |
 
+RFE-01: Asignación de espacio
 Control de versiones
 
 | Versión | Fecha | Descripción | Responsable |
 |---|---|---|---|
 | 1.0 | 2026-10-04 | Creación de la especificación inicial | Equipo SmartParking |
+| 1.1 | 2026-10-04 | Creación de la Asignación de espacio | Equipo SmartParking |
 
 ## 1. Proposito
 
@@ -54,13 +58,14 @@ El sistema debe permitir registrar el ingreso de un vehículo, almacenando los s
 - Placa del vehículo
 - Fecha de entrada
 - Hora de entrada
+- Espacio de asignación 
 
 Criterio de aceptacion:
 El vehiculo tiene que estar previamente registrado para el registro de ingreso.
 
 ### RF-003 - Registro de salida de vehículos
 
-El sistema deberá permitir registrar la salida de un vehículo que se encuentre dentro del parqueadero, almacenando la placa del vehículo, la fecha y la hora exacta de salida.
+El sistema deberá permitir registrar la salida de un vehículo que se encuentre dentro del parqueadero, almacenando la placa del vehículo, la fecha y la hora exacta de salida. y liberando el espacio de asignación.
 
 ### RF-004 - Consulta de disponibilidad
 
@@ -149,6 +154,7 @@ La versión 1.0 se considera funcional cuando:
 4. Es posible consultar los espacios disponibles.
 5. Es posible calcular el tiempo de permanencia.
 6. Las operaciones anteriores funcionan de manera coherente entre sí.
+7. Es posible asignar un espacio a cada vehículo que ingrese.
 
 ---
 
