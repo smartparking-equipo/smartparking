@@ -8,21 +8,25 @@
 | Código | TST-001 |
 | Nombre | Plan y casos de prueba |
 | Categoría | Pruebas |
-| Versión | 1.0 |
-| Estado | Pendiente por revisión |
+| Versión | 1.1 |
+| Estado | En modificación por CR-001 |
 | Sistema | SmartParking - Gestión de Parqueadero |
-| Especificación que verifica | ESP-001 v1.0 |
-| Código que verifica | SRC-001 v1.0 |
+| Especificación que verifica | ESP-001 v1.1 |
+| Código que verifica | SRC-001 v1.1 |
+| Fecha | 2026/10/04 |
+| Responsable del cambio | albeirosr |
+
 
 ## Control de versiones
 
 | Versión | Fecha | Descripción | Responsable |
 |---|---|---|---|
 | 1.0 | 2026-10-04 | Creación del plan y los casos de prueba iniciales | Equipo de SmartParking |
+| 1.1 | 2026-10-04 | Se aplican casos de prueba según CR-001 | Equipo de SmartParking |
 
 ## 2. Propósito
 
-Verificar que la versión 1.0 de SmartParking cumple los requisitos y reglas
+Verificar que la versión 1.1 de SmartParking cumple los requisitos y reglas
 de negocio de ESP-001, de modo que la línea base inicial sea coherente entre
 su especificación, su diseño, su código y su manual.
 
@@ -90,4 +94,4 @@ de marcar la línea base.
 
 Todos los requisitos funcionales y reglas de negocio tienen al menos un caso de prueba.
 
-
+Estado de la prueba: Pendiente de ejecución
