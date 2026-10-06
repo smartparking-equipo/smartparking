@@ -5,7 +5,7 @@
 # ESTADO: En modificacion CR-002
 # FECHA: 06/10/2026
 # RESPONSABLE DEL CI: Equipo SmartParking
-# RESPONSABLE DEL CAMBIO: alexagr210
+# RESPONSABLE DEL CAMBIO: Victorcano19
 # ==============================================================================
 # Nota de actualización documental — 06/10/2026:
 # Se evoluciona el código funcional para dar cumplimiento a la solicitud CR-002.
