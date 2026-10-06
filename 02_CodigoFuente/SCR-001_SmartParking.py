@@ -1,79 +1,111 @@
 # ==============================================================================
 # ELEMENTO DE CONFIGURACIÓN: SRC-001 - Gestión de Parqueadero Core
 # PROYECTO: SmartParking
-# VERSIÓN: 1.0
-# ESTADO: En modificación (Pendiente de revisión y aprobación)
+# VERSIÓN: 1.1
+# ESTADO: En modificación por CR-001 (Pendiente de revisión)
 # FECHA: 04/10/2026
 # RESPONSABLE DEL CI: Equipo SmartParking
-# RESPONSABLE DEL CAMBIO: Alexandra Giraldo Roman
+# RESPONSABLE DEL CAMBIO: Alexagr2110
 # ==============================================================================
 
 from datetime import datetime
 
+class Celda:
+    """[CR-001] Representa un espacio físico individual en el parqueadero."""
+    def __init__(self, identificador):
+        self.identificador = identificador  # Ejemplo: "Celda-01", "Celda-02"
+        self.vehiculo_ocupante = None       # Guarda la placa del carro si está ocupada
+
+    @property
+    def esta_disponible(self):
+        return self.vehiculo_ocupante is None
+
+
 class SmartParking:
     """
-    Lógica de control inicial para el Producto Mínimo Inicial de SmartParking.
-    Permite registrar vehículos, ingresos, salidas y calcular la permanencia.
+    Lógica de control evolucionada para la Línea Base 1.1.
+    Modificada para soportar el mapeo físico y asignación automática de celdas.
     """
-    def __init__(self, capacidad_total):
-        self.capacidad_total = capacidad_total
-        # Estructura inicial: diccionario para mapear {placa: hora_ingreso_datetime}
+    def __init__(self, lista_identificadores):
+        """
+        Inicializa el parqueadero con un listado estructurado de espacios físicos.
+        lista_identificadores: Lista de strings ['Celda-01', 'Celda-02', ...]
+        """
+        # Creación del mapa físico de celdas del parqueadero
+        self.celdas = {id_c: Celda(id_c) for id_c in lista_identificadores}
+        self.capacidad_total = len(lista_identificadores)
+        # Diccionario de auditoría rápida para mapear {placa: (hora_ingreso, objeto_celda)}
         self.vehiculos_activos = {}
 
+    def _buscar_espacio_disponible(self):
+        """[CR-001] Algoritmo interno para encontrar la primera celda libre."""
+        for celda in self.celdas.values():
+            if celda.esta_disponible:
+                return celda
+        return None
+
     def registrar_ingreso(self, placa):
-        """Registra la placa de un vehículo y guarda su marca de tiempo de entrada."""
-        # Validación de duplicados en el estado activo
+        """[CR-001] Registra el vehículo y le asigna un espacio automáticamente."""
         if placa in self.vehiculos_activos:
-            return f"ERROR: El vehículo con placa {placa} ya se encuentra dentro del parqueadero."
+            return f"ERROR: El vehículo con placa {placa} ya registra un ingreso activo."
+
+        # Invocar la función de búsqueda automática de celdas libres
+        celda_libre = self._buscar_espacio_disponible()
         
-        # Validación de cupo global (Línea Base 1.0)
-        if len(self.vehiculos_activos) >= self.capacidad_total:
-            return "INGRESO RECHAZADO: No hay celdas globales disponibles en este momento."
+        if not celda_libre:
+            return "INGRESO RECHAZADO: No hay celdas físicas disponibles en este momento."
+
+        # Mutar el estado físico de la celda y guardarlo en el mapa de control
+        celda_libre.vehiculo_ocupante = placa
+        self.vehiculos_activos[placa] = (datetime.now(), celda_libre)
         
-        # Captura de la hora de ingreso en tiempo real
-        self.vehiculos_activos[placa] = datetime.now()
-        return f"INGRESO EXITOSO: Vehículo {placa} registrado correctamente."
+        return (f"INGRESO EXITOSO: Vehículo {placa} registrado. "
+                f"Celda asignada automáticamente: {celda_libre.identificador}")
 
     def registrar_salida(self, placa):
-        """Libera el espacio del vehículo y calcula el tiempo de permanencia exacto."""
+        """Modificado para liberar el espacio de la celda asignada y calcular permanencia."""
         if placa not in self.vehiculos_activos:
             return f"ERROR: No se encontró un registro de ingreso activo para la placa {placa}."
         
-        # Extraer la marca de tiempo de entrada y remover del parqueadero activo
-        hora_ingreso = self.vehiculos_activos.pop(placa)
+        # Extraer la metadata de control del vehículo activo
+        hora_ingreso, celda_asignada = self.vehiculos_activos.pop(placa)
         hora_salida = datetime.now()
         
-        # Cálculo preciso de la permanencia convertido a minutos
+        # [CR-001] Liberar el recurso físico para que quede disponible para otros usuarios
+        celda_asignada.vehiculo_ocupante = None
+        
+        # Cálculo de permanencia en minutos (Mantenido de la Línea Base 1.0)
         diferencia = hora_salida - hora_ingreso
         tiempo_permanencia_minutos = int(diferencia.total_seconds() / 60)
         
-        return (f"SALIDA EXITOSA: Vehículo {placa} ha salido del parqueadero. "
-                f"Tiempo total de permanencia: {tiempo_permanencia_minutos} minutos.")
+        return (f"SALIDA EXITOSA: Vehículo {placa} liberó la celda {celda_asignada.identificador}. "
+                f"Tiempo total de permanencia: {tiempo_permanencia_minutos} minutes.")
 
     def consultar_disponibilidad(self):
-        """Consulta matemática simple de cupos libres totales basados en la capacidad."""
-        cupos_ocupados = len(self.vehiculos_activos)
-        cupos_disponibles = self.capacidad_total - cupos_ocupados
-        return cupos_disponibles
+        """Modificado para contar de manera exacta las celdas desocupadas."""
+        cupos_libres = sum(1 for celda in self.celdas.values() if celda.esta_disponible)
+        return cupos_libres
 
 
 # ==============================================================================
-# REVISIÓN DE COHERENCIA CON LA LÍNEA BASE INICIAL (BL-001)
+# VERIFICACIÓN LOCAL DE LA SOLICITUD DE CAMBIO (CR-001)
 # ==============================================================================
 if __name__ == "__main__":
-    # Simulación del estado base sin automatizaciones para pruebas locales
-    print("--- CONTROL DE CONFIGURACIÓN LOCAL - VERIFICACIÓN REQ VS SRC ---")
+    print("--- CONTROL DE CAMBIOS LOCAL - VERIFICACIÓN DE CR-001 ---")
     
-    # Parqueadero universitario con capacidad inicial de 50 puestos globales
-    parqueadero_test = SmartParking(capacidad_total=50)
+    # Simulación de un parqueadero con 3 celdas fijas nominadas
+    puestos_campus = ["Cupo-01", "Cupo-02", "Cupo-03"]
+    parqueadero_test = SmartParking(puestos_campus)
     
-    # 1. Verificar lectura de disponibilidad inicial (Debe coincidir con la capacidad)
-    print(f"Cupos libres al inicializar: {parqueadero_test.consultar_disponibilidad()}")
+    print(f"Disponibilidad inicial de celdas: {parqueadero_test.consultar_disponibilidad()}")
     
-    # 2. Simular un flujo básico de ingreso
-    print(parqueadero_test.registrar_ingreso("UCP-123"))
-    print(f"Cupos libres tras un ingreso: {parqueadero_test.consultar_disponibilidad()}")
+    # Verificar la función de asignación automática secuencial
+    print(parqueadero_test.registrar_ingreso("UCP-888"))  # Debe tomar Cupo-01
+    print(parqueadero_test.registrar_ingreso("XYZ-999"))  # Debe tomar Cupo-02
     
-    # 3. Simular salida inmediata (Tiempo esperado: 0 minutos)
-    print(parqueadero_test.registrar_salida("UCP-123"))
-    print(f"Cupos libres tras la salida: {parqueadero_test.consultar_disponibilidad()}")
+    print(f"Disponibilidad intermedia de celdas: {parqueadero_test.consultar_disponibilidad()}")
+    
+    # Probar la liberación física del espacio asignado
+    print(parqueadero_test.registrar_salida("UCP-888"))   # Libera Cupo-01
+    print(f"Disponibilidad final de celdas: {parqueadero_test.consultar_disponibilidad()}")
+

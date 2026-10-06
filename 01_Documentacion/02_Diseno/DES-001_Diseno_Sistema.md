@@ -6,11 +6,12 @@
 |---|---|
 | Código | DES-001 |
 | Nombre | Diseño del Sistema SmartParking |
-| Versión | 1.0 |
+| Versión | 1.1 |
 | Estado | Borrador para revisión |
 | Sistema | SmartParking - Gestión de Parqueadero |
-| Fecha | 2026-10-04 |
+| Fecha | 2026-10-05 |
 | Responsable | Equipo SmartParking |
+| Responsable del cambio | Revant11y |
 
 ## 1. Propósito
 
@@ -113,6 +114,7 @@ Un vehículo puede tener varias estancias históricas, pero como máximo una act
 | Estancia | id_parqueadero | Entero | Clave foránea obligatoria hacia el parqueadero configurado. |
 | Estancia | fecha_hora_ingreso | Fecha y hora | Obligatoria; instante en que se registra el ingreso. |
 | Estancia | fecha_hora_salida | Fecha y hora, admite nulo | Nula mientras la estancia esté activa; al cerrarse debe ser mayor o igual al ingreso. |
+| Estancia | espacioAsignacion| Espacio asignado | Obligatoria; instante en que se registra el ingreso. |
 | Parqueadero | id_parqueadero | Entero | Clave primaria del único parqueadero configurado. |
 | Parqueadero | capacidad_total | Entero | Obligatoria y mayor que cero. |
 
@@ -378,5 +380,6 @@ El recorrido integrado de registro, ingreso, consulta de disponibilidad, consult
 | Versión | Fecha | Descripción | Solicitud de cambio | Responsable |
 |---|---|---|---|---|
 | 1.0 | 2026-10-04 | Elaboración inicial del diseño versión 1.0. | No aplica: elaboración inicial. | Equipo SmartParking |
+| 1.1 | 05/10/2026 | Se agrega el atributo espacio de asignación según CR-001 | Revant11y |
 
 Toda modificación posterior debe registrar su versión, fecha, descripción, responsable y referencia a la solicitud de cambio correspondiente. La aprobación de este diseño queda pendiente de revisión.
