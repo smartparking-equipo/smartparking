@@ -9,7 +9,7 @@
 | Nombre | Plan y casos de prueba |
 | Categoría | Pruebas |
 | Versión | 1.1 |
-| Estado | En modificación por CR-001 |
+| Estado | Aprobado |
 | Sistema | SmartParking - Gestión de Parqueadero |
 | Especificación que verifica | ESP-001 v1.1 |
 | Código que verifica | SRC-001 v1.1 |
@@ -23,6 +23,8 @@
 |---|---|---|---|
 | 1.0 | 2026-10-04 | Creación del plan y los casos de prueba iniciales | Equipo de SmartParking |
 | 1.1 | 2026-10-04 | Se aplican casos de prueba según CR-001 | Equipo de SmartParking |
+
+Nota de actualización documental — 06/10/2026: se actualiza el estado del documento a Aprobado, conforme a la aprobación de CR-001 registrada por Revant11y, ya integrado en main. Se conserva la versión 1.1 y el contenido de los requisitos. Responsable de la actualización: SaraArias801.
 
 ## 2. Propósito
 

@@ -6,7 +6,7 @@
 - Nombre: Matriz de Trazabilidad
 - Proyecto: smartparking
 - Versión: 1.1
-- estado pendiente por revisión 
+- Estado: Aprobado
 - Fecha: 10/05/2026
 - Responsable: Equipo smartparking
 - responsable del cambio: Revant11y
@@ -18,6 +18,8 @@
 |---------|-------|------------------------|-------------|
 | 1.0 | 04/10/2026 | Creación inicial de la matriz de trazabilidad | Equipo smartparking |
 | 1.1 | 05/10/2026 | Actualización de la trazabilidad asociada a CR-001 - Agregar atributo espacio asignado  | Revant11y |
+
+Nota de actualización documental — 06/10/2026: se actualiza el estado del documento a Aprobado, conforme a la aprobación de CR-001 registrada por Revant11y, ya integrado en main. Se conserva la versión 1.1 y el contenido de los requisitos. Responsable de la actualización: SaraArias801.
 
 
 

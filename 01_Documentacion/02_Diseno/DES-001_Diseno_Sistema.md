@@ -7,11 +7,13 @@
 | Código | DES-001 |
 | Nombre | Diseño del Sistema SmartParking |
 | Versión | 1.1 |
-| Estado | Borrador para revisión |
+| Estado | Aprobado |
 | Sistema | SmartParking - Gestión de Parqueadero |
 | Fecha | 2026-10-05 |
 | Responsable | Equipo SmartParking |
 | Responsable del cambio | Revant11y |
+
+Nota de actualización documental — 06/10/2026: se actualiza el estado del documento a Aprobado, conforme a la aprobación de CR-001 registrada por Revant11y, ya integrado en main. Se conserva la versión 1.1 y el contenido de los requisitos. Responsable de la actualización: SaraArias801.
 
 ## 1. Propósito
 
