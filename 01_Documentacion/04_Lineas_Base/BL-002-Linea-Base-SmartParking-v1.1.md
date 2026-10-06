@@ -7,7 +7,7 @@
 - Nombre: Línea Base de Asignación Automática de Espacio
 - Versión del producto: 1.1
 - Fecha de establecimiento: 06/10/2026
-- Estado: Pendiente por aprobar
+- Estado: Aprobado
 - Responsable: SaraArias801
 - Línea base anterior: BL-001, identificada con la etiqueta `v1.0`
 - Solicitud de cambio incorporada: CR-001 — Asignación de espacio (aprobada)
@@ -69,11 +69,12 @@ Una vez establecida BL-002, los elementos incluidos no deberán modificarse dire
 
 ## 6. Identificación técnica
 
-Una vez aprobado e integrado este documento en `main`, la línea base BL-002 se identificará mediante la **etiqueta Git anotada `v1.1`**, creada sobre el commit de `main` que incluya tanto CR-001 como este documento. Esta etiqueta permitirá recuperar el estado exacto del repositorio correspondiente a la línea base.
+Una vez aprobado e integrado este documento en `main`, la línea base BL-002 se identificará mediante la `v1.1`, creada sobre el commit de `main` que incluya tanto CR-001 como este documento. Esta etiqueta permitirá recuperar el estado exacto del repositorio correspondiente a la línea base.
 
-- Etiqueta: `v1.1` (**pendiente de crear tras integrar este documento**).
-- Commit al que apunta la etiqueta: **[Registrar después de crearla]**.
+- Etiqueta: `v1.1`.
+- Commit al que apunta la etiqueta: 2c18e96.
 
 ## 7. Observaciones
 
 BL-002 incorpora el cambio aprobado CR-001 respecto de BL-001 sin modificar la etiqueta histórica `v1.0`. Los campos marcados para verificación deben resolverse con el repositorio y las evidencias del equipo antes de aprobar la línea base. La creación de este archivo en una rama de documentación aún no establece la línea base: la aprobación, la integración y la etiqueta completan el proceso.
+
