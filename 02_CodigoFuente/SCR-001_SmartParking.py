@@ -2,10 +2,16 @@
 # ELEMENTO DE CONFIGURACIÓN: SRC-001 - Gestión de Parqueadero Core
 # PROYECTO: SmartParking
 # VERSIÓN: 1.1
-# ESTADO: En modificación por CR-001 (Pendiente de revisión)
+# ESTADO: Aprobado
 # FECHA: 04/10/2026
 # RESPONSABLE DEL CI: Equipo SmartParking
 # RESPONSABLE DEL CAMBIO: Alexagr2110
+# ==============================================================================
+# Nota de actualización documental — 06/10/2026:
+# Se actualiza el estado de SRC-001 a Aprobado, conforme a la aprobación
+# de CR-001 registrada por Revant11y, ya integrado en main.
+# Se conserva la versión 1.1 y el código funcional.
+# Responsable de la actualización: SaraArias801.
 # ==============================================================================
 
 from datetime import datetime
