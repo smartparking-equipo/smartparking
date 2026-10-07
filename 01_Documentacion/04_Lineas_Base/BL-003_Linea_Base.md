@@ -2,7 +2,7 @@
 
 ## Información de la línea base
 
-- Código: BL-002
+- Código: BL-003
 - Proyecto: SmartParking
 - Nombre: Línea Base de Asignación Automática de Espacio
 - Versión del producto: 1.2
