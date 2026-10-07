@@ -7,11 +7,12 @@
 | Código | DES-001 |
 | Nombre | Diseño del Sistema SmartParking |
 | Versión | 1.2 |
-| Estado | En modificacion CR-002 |
+| Estado |Aprobado para BL-003 |
 | Sistema | SmartParking - Gestión de Parqueadero |
 | Fecha | 2026-10-06 |
 | Responsable | Equipo SmartParking |
 | Responsable del cambio | alexagr210 |
+| Responsable del cambio | albeirosr |
 
 Nota de actualización documental — 06/10/2026: se actualiza el estado del documento a En modificación, conforme a la solicitud de cambio CR-002 (Vehículos eléctricos y celdas con cargador). Se evoluciona el modelo entidad-relación, el diccionario de datos, las reglas de negocio y los flujos operacionales. Responsable de la actualización: alexagr210.
 

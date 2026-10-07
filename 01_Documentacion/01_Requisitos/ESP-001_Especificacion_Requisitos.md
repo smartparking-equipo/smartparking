@@ -7,7 +7,7 @@
 | Codigo | ESP-001 |
 | Nombre | Especificacion de Requisitos SmartParking |
 | Version | 1.2 |
-| Estado | En modificacion CR-002|
+| Estado | Aprobado para BL-003|
 | Fecha | 2026-10-06  |
 | Sistema | SmartParking - Gestion de Parqueadero |
 | Responsable del cambio| alexagr210 |
