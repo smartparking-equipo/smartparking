@@ -1,4 +1,4 @@
-# BL-003 - Línea Base 1.1 de SmartParking
+# BL-003 - Línea Base 1.2 de SmartParking
 
 ## Información de la línea base
 
