@@ -6,8 +6,9 @@
 - Nombre: Matriz de Trazabilidad
 - Proyecto: smartparking
 - Versión: 1.3
-- Estado: En revisión; pendiente de aprobación e integración de este documento
+- Estado: Aprobado para BL-002; CR-002 implementada y cerrada
 - Fecha: 06/10/2026
+- Fecha de cierre: 07/10/2026
 - Responsable: Equipo smartparking
 - Responsable del cambio CR-001: Revant11y
 - Responsable del cambio CR-001: SaraArias801
@@ -60,6 +61,8 @@ SRC-001 v1.2 — Implementación de clases Vehiculo/Celda y algoritmo privado _b
 TST-001 v1.2 — Casos de prueba funcionales desde CP-015 hasta CP-021
   ↓
 PR #5 de implementación y cierre documental unificado
+  ↓
+PR #6 aprobado y fusionado
 ```
 
 TRA-001 v1.2 registra estas relaciones. Las versiones se toman de cada CI y no se infieren únicamente de la versión del producto.
@@ -158,8 +161,9 @@ Nueva versión de los elementos afectados
 |--------------------|--------------------|-----------------|-----------------|-----------------|-------------|--------|
 | Sin cambios aprobados en la versión 1.0 | - | - | - | - | - | Línea base inicial |
 | CR-001 - Agregar atributo espacio asignación | ESP-001 v1.1 / RF-002 | DES-001 v1.1 | SRC-001 v1.1 | TST-001 v1.1 / CP-003 | PR #2 | Aprobado |
-| CR-002 — Vehículos que requieren carga | ESP-001 v1.2 / RF-001, RF-007 | DES-001 v1.2 | SRC-001 v1.2 | TST-001 v1.2 / CP-015, CP-017 | PR #5 | En revisión |
-| CR-002 — Espacios con cargador | ESP-001 v1.2 / RF-007, RF-004 | DES-001 v1.2 | SRC-001 v1.2 | TST-001 v1.2 / CP-016, CP-021 | PR #5 | En revisión |
+| CR-002 — Vehículos que requieren carga | ESP-001 v1.2 / RF-001, RF-007 | DES-001 v1.2 | SRC-001 v1.2 | TST-001 v1.2 / CP-015, CP-017 | PR #5 | Aprobado |
+| CR-002 — Espacios con cargador | ESP-001 v1.2 / RF-007, RF-004 | DES-001 v1.2 | SRC-001 v1.2 | TST-001 v1.2 / CP-016, CP-021 | PR #6 | Aprobado|
+
 
 ## 7. Observations
 
